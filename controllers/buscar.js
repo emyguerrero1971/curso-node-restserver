@@ -1,8 +1,9 @@
 const { response } = require("express");
 const { Usuario, Categoria, Producto } = require("../models");
 const { ObjectId } = require("mongoose").Types;
+const { buscarIdPorNombre } = require("../helpers/funciones");
 
-const coleccionesPermitidas =[
+const coleccionesPermitidas = [
     'categorias',
     'productos',
     'prodcat',
@@ -75,18 +76,28 @@ const buscarProdCat = async (termino = '', res = response) => {
     const esMongoID = ObjectId.isValid(termino); //True
 
     if( esMongoID) {
-        // const producto = await Producto.find(ObjectId('termino'));
-        const producto = await Producto.find({categoria: ObjectId(termino)})
-                                .populate('usuario', {_id:0, nombre:1});
+        const producto = await Producto.find({categoria: ObjectId(termino), estado: true });
 
         return res.json({
             results: ( producto ) ? [ producto ] : []
         });
     }
 
-    res.json({
-        msg: 'No existe esa colección en la BD'
-    });
+    const regex = new RegExp( termino, 'i');
+    const idCat = await buscarIdPorNombre('categorias', regex);
+
+    if( idCat) {
+        const productos = await Producto.find({categoria: ObjectId(idCat), estado: true });
+
+        res.json({
+            results: ( productos ) ? [ productos ] : []
+        });
+    }
+    else {
+        res.json({
+            msg: 'No existen coincidencias para esta categoria'
+        })
+    }
 }
 
 const buscarUsuarios = async (termino = '', res = response) => {
