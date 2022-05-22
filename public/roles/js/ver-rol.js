@@ -2,12 +2,12 @@
 const divTotal = document.querySelector('#divTotal');
 const divRoles = document.querySelector('#divRoles');
 
-let url ='https://digbal_rsw_server.herokuapp.com';
-const ambiente = process.env.AMBIENTE;
+let url ='https://digbal.herokuapp.com';
+// const ambiente = process.env.AMBIENTE;
 
-if(ambiente === 0) {
-    url = 'http://localhost:8080';
-}
+// if(ambiente === 0) {
+//     url = 'http://localhost:8080';
+// }
 
 fetch(`${url}/api/roles`, {
     method: 'GET',    
