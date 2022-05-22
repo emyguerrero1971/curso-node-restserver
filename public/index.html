@@ -1,12 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceso Denegado</title>
-</head>
-<body>
-    <h1>Acceso Denegado</h1>
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <title>digBal</title>
+        
+        <style>
+            * {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            #header {
+                margin: auto;
+                width: 100%;
+                background-color: black;
+            }
+
+            ul, ol {
+                list-style: none;
+            }
+
+            .nav li a {
+                background-color: black;
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 15px;
+                display: block;
+            }
+            
+            .nav li a:hover {
+                background-color: #434343;
+            }
+
+            .nav > li {
+                float: left;
+            }
+
+            .nav li ul {
+                display: none;
+                position: absolute;
+                min-width: 140px;
+            }
+
+            .nav li:hover > ul {
+                display: block;
+            }
+            
+            .nav li ul li {
+                position: relative;
+            }
+
+            .nav li ul li ul{
+                right: -140px;
+                top: opx;
+            }
+
+            div{
+                position: absolute;
+                width: 100%;
+            }
+        </style>
+    </head>
+
+    <body class="container">
+
+        <header>
+            <h1 class="mt-2">digBal</h1>
+            <hr>
+        </header>
+
+        <div id="header" style="width: 100%;">
+            <ul class="nav">
+                <li><a href="#">Login/JWT</a></li>
+                <li><a href="">Usuario</a>
+                    <ul>
+                        <li><a href="./html/usuario/crear-usuario.html">Crear</a></li>
+                        <li><a href="./html/usuario/ver-usuario.html">Ver</a></li>
+                        <li><a href="./html/usuario/actualizar-usuario.html">Actualizar</a></li>
+                        <li><a href="./html/usuario/eliminar-usuario.html">Eliminar</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Perfil</a>
+                    <ul>
+                        <li><a href="./html/perfil/ver-perfil.html">Ver</a></li>
+                        <li><a href="./html/perfil/actualizar-perfil.html">Actualizar</a></li>
+                        <li><a href="./html/perfil/cargar-imagen.html">Cargar Imagen</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Rol</a>
+                    <ul>
+                        <li><a href="./roles/html/crear-rol.html">Crear</a></li>
+                        <li><a href="./roles/html/ver-rol.html">Ver</a></li>
+                        <li><a href="./roles/html/actualizar-rol.html">Actualizar</a></li>
+                        <li><a href="./roles/html//eliminar-rol.html">Eliminar</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Tipo_Usr</a>
+                    <ul>
+                        <li><a href="./html/tipousr/crear-tipousr.html">Crear</a></li>
+                        <li><a href="./html/tipousr/ver-tipousr.html">Ver</a></li>
+                        <li><a href="./html/tipousr/actualizar-tipousr.html">Actualizar</a></li>
+                        <li><a href="./html/tipousr/eliminar-tipousr.html">Eliminar</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Nivel</a>
+                    <ul>
+                        <li><a href="./html/nivel/crear-nivel.html">Crear</a></li>
+                        <li><a href="./html/nivel/ver-nivel.html">Ver</a></li>
+                        <li><a href="./html/nivel/actualizar-nivel.html">Actualizar</a></li>
+                        <li><a href="./html/nivel/eliminar-nivel.html">Eliminar</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Pais</a>
+                    <ul>
+                        <li><a href="./html/pais/crear-pais.html">Crear</a></li>
+                        <li><a href="./html/pais/ver-pais.html">Ver</a></li>
+                        <li><a href="./html/pais/actualizar-pais.html">Actualizar</a></li>
+                        <li><a href="./html/pais/eliminar-pais.html">Eliminar</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Poligono</a>
+                    <ul>
+                        <li><a href="./html/poligono/crear-poligono.html">Crear</a></li>
+                        <li><a href="./html/poligono/ver-poligono.html">Ver</a></li>
+                        <li><a href="./html/poligono/actualizar-poligono.html">Actualizar</a></li>
+                        <li><a href="./html/poligono/eliminar-poligono.html">Eliminar</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Eleccion</a>
+                    <ul>
+                        <li><a href="">Convocatoria</a>
+                            <ul>
+                                <li><a href="./html/convocatoria/crear-convocatoria.html">Crear</a></li>
+                                <li><a href="./html/convocatoria/ver-convocatoria.html">Ver</a></li>
+                                <li><a href="./html/convocatoria/actualizar-convocatoria.html">Actualizar</a></li>
+                                <li><a href="./html/convocatoria/eliminar-convocatoria.html">Eliminar</a></li>
+                            </ul>
+                        <li><a href="">Dignidad</a>
+                            <ul>
+                                <li><a href="./html/dignidad/crear-dignidad.html">Crear</a></li>
+                                <li><a href="./html/dignidad/ver-dignidad.html">Ver</a></li>
+                                <li><a href="./html/dignidad/actualizar-dignidad.html">Actualizar</a></li>
+                                <li><a href="./html/dignidad/eliminar-dignidad.html">Eliminar</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Proceso</a>
+                            <ul>
+                                <li><a href="./html/proceso/crear-proceso.html">Crear</a></li>
+                                <li><a href="./html/proceso/ver-proceso.html">Ver</a></li>
+                                <li><a href="./html/proceso/actualizar-proceso.html">Actualizar</a></li>
+                                <li><a href="./html/proceso/eliminar-proceso.html">Eliminar</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Candidato</a>
+                            <ul>
+                                <li><a href="./html/candidato/crear-candidato.html">Crear</a></li>
+                                <li><a href="./html/candidato/ver-candidato.html">Ver</a></li>
+                                <li><a href="./html/candidato/actualizar-candidato.html">Actualizar</a></li>
+                                <li><a href="./html/candidato/eliminar-candidato.html">Eliminar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </body>
+
 </html>
